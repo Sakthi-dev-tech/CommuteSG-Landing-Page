@@ -46,7 +46,7 @@ const Header = () => {
           
           {/* Desktop navigation */}
           <nav className="hidden md:ml-6 md:flex md:space-x-12">
-            <Link to="/" className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors">
+            <Link to="/" onClick={() => handleSectionNavigation('hero')} className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors">
               Home
             </Link>
             <button 

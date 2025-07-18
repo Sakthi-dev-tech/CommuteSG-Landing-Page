@@ -3,7 +3,7 @@ import { AndroidMockup } from 'react-device-mockup';
 
 const HeroSection = () => {
   return (
-    <section className="hero-gradient min-h-screen flex items-center justify-center">
+    <section id='hero' className="hero-gradient min-h-screen flex items-center justify-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-items-center">
           {/* Left side - Text content */}
