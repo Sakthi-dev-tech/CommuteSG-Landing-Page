@@ -1,11 +1,37 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleSectionNavigation = (sectionId: string) => {
+    // If we're not on the homepage, navigate to homepage first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
+    } else {
+      // If already on homepage, just scroll
+      scrollToSection(sectionId);
+    }
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
   return (
@@ -23,12 +49,18 @@ const Header = () => {
             <Link to="/" className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors">
               Home
             </Link>
-            <a href="#features" className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors">
+            <button 
+              onClick={() => handleSectionNavigation('features')}
+              className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
+            >
               Features
-            </a>
-            <a href="#support" className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors">
+            </button>
+            <button 
+              onClick={() => handleSectionNavigation('support')}
+              className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
+            >
               Support
-            </a>
+            </button>
             <Link to="/privacy" className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors">
               Privacy Policy
             </Link>
@@ -97,20 +129,24 @@ const Header = () => {
           >
             Home
           </Link>
-          <a
-            href="#features"
-            className="block px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
+          <button
+            onClick={() => {
+              handleSectionNavigation('features');
+              setIsMenuOpen(false);
+            }}
+            className="block w-full text-left px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
           >
             Features
-          </a>
-          <a
-            href="#support"
-            className="block px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
-            onClick={() => setIsMenuOpen(false)}
+          </button>
+          <button
+            onClick={() => {
+              handleSectionNavigation('support');
+              setIsMenuOpen(false);
+            }}
+            className="block w-full text-left px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
           >
             Support
-          </a>
+          </button>
           <Link
             to="/privacy"
             className="block px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
