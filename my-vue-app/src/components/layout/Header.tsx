@@ -9,9 +9,9 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <header className="bg-white shadow-sm fixed w-full justify-center items-center top-0 z-50">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20 px-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold text-primary">CommuteSG</span>
@@ -35,7 +35,7 @@ const Header = () => {
           </nav>
           
           {/* Download button */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center px-8 py-4">
             <button className="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-light transition-colors shadow-md">
               Download Now
             </button>
