@@ -80,45 +80,38 @@ const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="feature-card bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+              className={`feature-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 relative overflow-hidden ${
+                hoveredFeature === index ? feature.demoBg : feature.placeholderBg
+              }`}
               onMouseEnter={() => setHoveredFeature(index)}
               onMouseLeave={() => setHoveredFeature(null)}
             >
-              <div className="flex flex-col items-center text-center">
-                {/* Feature Image/Demo Area */}
-                <div className="w-full h-48 mb-6 rounded-lg overflow-hidden relative">
-                  <div
-                    className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${
-                      hoveredFeature === index ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
-                    } ${feature.placeholderBg}`}
-                  >
-                    <div className="text-gray-500">
-                      {feature.icon}
-                    </div>
-                  </div>
-                  
-                  {/* Demo content that appears on hover */}
-                  <div
-                    className={`absolute inset-0 p-4 transition-all duration-500 ${
-                      hoveredFeature === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
-                    } ${feature.demoBg} flex items-center justify-center`}
-                  >
-                    <div className="text-sm text-gray-700 font-medium whitespace-pre-line text-center">
-                      {feature.demoContent}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Feature Info */}
-                <div className="text-primary mb-4">
+              {/* Default content - icon, title, description */}
+              <div
+                className={`flex flex-col items-center text-center h-full transition-all duration-500 ${
+                  hoveredFeature === index ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+                }`}
+              >
+                <div className="text-gray-700 mb-6 mt-8">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   {feature.description}
                 </p>
+              </div>
+
+              {/* Demo content that appears on hover */}
+              <div
+                className={`absolute inset-0 p-6 flex items-center justify-center transition-all duration-500 ${
+                  hoveredFeature === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+                }`}
+              >
+                <div className="text-sm text-gray-700 font-medium whitespace-pre-line text-center">
+                  {feature.demoContent}
+                </div>
               </div>
             </motion.div>
           ))}
