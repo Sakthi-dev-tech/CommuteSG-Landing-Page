@@ -4,12 +4,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and description */}
           <div>
-            <Link to="/" className="text-xl font-bold">CommuteSG</Link>
+            <Link to="/" className="text-xl font-bold text-primary">CommuteSG</Link>
             <p className="mt-2 text-sm text-gray-300">
               Your essential companion for navigating Singapore's public transport system with ease.
             </p>
@@ -20,17 +20,17 @@ const Footer = () => {
             <h3 className="text-sm font-semibold uppercase tracking-wider">Quick Links</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white">
-                  Home
-                </Link>
+                <a href="#features" className="text-gray-300 hover:text-white transition-colors">
+                  Features
+                </a>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white">
-                  Contact Us
-                </Link>
+                <a href="#support" className="text-gray-300 hover:text-white transition-colors">
+                  Support
+                </a>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-300 hover:text-white">
+                <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
               </li>
@@ -41,20 +41,15 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider">Download</h3>
             <div className="mt-4">
-              <a 
-                href="https://play.google.com/store" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-white text-gray-800 px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition-colors"
-              >
+              <button className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-medium hover:bg-primary-dark transition-colors shadow-md">
                 Get it on Google Play
-              </a>
+              </button>
             </div>
           </div>
         </div>
         
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-gray-700">
+        <div className="mt-8 pt-8 border-t border-gray-700 text-center">
           <p className="text-sm text-gray-400">
             &copy; {currentYear} CommuteSG. All rights reserved.
           </p>
