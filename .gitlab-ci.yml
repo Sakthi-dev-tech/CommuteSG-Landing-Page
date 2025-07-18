@@ -4,12 +4,11 @@ pages:
   cache:
     key:
       files:
-        - my-vue-app/package-lock.json
+        - package-lock.json
       prefix: npm
     paths:
-      - my-vue-app/node_modules/
+      - node_modules/
   script:
-    - cd my-vue-app
     - npm install
     - npm run build
     - cp -a dist/. public/
