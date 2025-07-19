@@ -35,7 +35,7 @@ const Header = () => {
   };
 
   return (
-<header className="bg-white shadow-sm fixed w-full top-0 z-50 flex justify-center">
+    <header className="bg-white shadow-sm fixed w-full top-0 z-50 flex justify-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
@@ -54,8 +54,6 @@ const Header = () => {
               Home
             </Link>
 
-            <span className="w-3"></span>
-
             <button
               onClick={() => handleSectionNavigation("features")}
               className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
@@ -63,16 +61,12 @@ const Header = () => {
               Features
             </button>
 
-            <span className="w-3"></span>
-
             <button
               onClick={() => handleSectionNavigation("support")}
               className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
             >
               Support
             </button>
-
-            <span className="w-3"></span>
 
             <Link
               to="/privacy"
@@ -84,7 +78,7 @@ const Header = () => {
 
           {/* Download button */}
           <div className="hidden md:flex items-center">
-            <button className="bg-primary text-white rounded-full font-medium hover:bg-primary-light transition-colors shadow-md w-32 h-10">
+            <button className="bg-primary text-white rounded-full font-medium hover:bg-primary-light transition-colors shadow-md px-6 py-2">
               Download Now
             </button>
           </div>
