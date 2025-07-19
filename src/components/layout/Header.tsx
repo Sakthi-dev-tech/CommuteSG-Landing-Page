@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,8 +12,8 @@ const Header = () => {
 
   const handleSectionNavigation = (sectionId: string) => {
     // If we're not on the homepage, navigate to homepage first
-    if (location.pathname !== '/') {
-      navigate('/');
+    if (location.pathname !== "/") {
+      navigate("/");
       // Wait for navigation to complete, then scroll
       setTimeout(() => {
         scrollToSection(sectionId);
@@ -27,52 +27,59 @@ const Header = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
 
   return (
-    <header className="bg-white shadow-sm fixed w-full justify-center items-center top-0 z-50">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 px-20">
+<header className="bg-white shadow-sm fixed w-full top-0 z-50 flex justify-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold text-primary">CommuteSG</span>
             </Link>
           </div>
-          
+
           {/* Desktop navigation */}
-          <nav className="hidden md:ml-6 md:flex md:space-x-12">
-            <Link to="/" onClick={() => handleSectionNavigation('hero')} className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors">
+          <nav className="hidden md:flex md:items-center space-x-8">
+            <Link
+              to="/"
+              onClick={() => handleSectionNavigation("hero")}
+              className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
+            >
               Home
             </Link>
-            <button 
-              onClick={() => handleSectionNavigation('features')}
+            <button
+              onClick={() => handleSectionNavigation("features")}
               className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
             >
               Features
             </button>
-            <button 
-              onClick={() => handleSectionNavigation('support')}
+            <button
+              onClick={() => handleSectionNavigation("support")}
               className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
             >
               Support
             </button>
-            <Link to="/privacy" className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors">
+            <Link
+              to="/privacy"
+              className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
+            >
               Privacy Policy
             </Link>
           </nav>
-          
+
           {/* Download button */}
-          <div className="hidden md:flex items-center px-8 py-4">
-            <button className="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-light transition-colors shadow-md">
+          <div className="hidden md:flex items-center">
+            <button className="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary-light transition-colors shadow-md">
               Download Now
             </button>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden">
             <button
@@ -84,7 +91,7 @@ const Header = () => {
               <span className="sr-only">Open main menu</span>
               {/* Icon when menu is closed */}
               <svg
-                className={`${isMenuOpen ? 'hidden' : 'block'} h-6 w-6`}
+                className={`${isMenuOpen ? "hidden" : "block"} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -100,7 +107,7 @@ const Header = () => {
               </svg>
               {/* Icon when menu is open */}
               <svg
-                className={`${isMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
+                className={`${isMenuOpen ? "block" : "hidden"} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -120,7 +127,11 @@ const Header = () => {
       </div>
 
       {/* Mobile menu, show/hide based on menu state */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-white border-t`}>
+      <div
+        className={`${
+          isMenuOpen ? "block" : "hidden"
+        } md:hidden bg-white border-t`}
+      >
         <div className="py-4 space-y-2">
           <Link
             to="/"
@@ -131,7 +142,7 @@ const Header = () => {
           </Link>
           <button
             onClick={() => {
-              handleSectionNavigation('features');
+              handleSectionNavigation("features");
               setIsMenuOpen(false);
             }}
             className="block w-full text-left px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
@@ -140,7 +151,7 @@ const Header = () => {
           </button>
           <button
             onClick={() => {
-              handleSectionNavigation('support');
+              handleSectionNavigation("support");
               setIsMenuOpen(false);
             }}
             className="block w-full text-left px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
@@ -155,7 +166,7 @@ const Header = () => {
             Privacy Policy
           </Link>
           <div className="px-4 py-3">
-            <button className="w-full bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-light transition-colors shadow-md">
+            <button className="w-full bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary-light transition-colors shadow-md">
               Download Now
             </button>
           </div>
