@@ -53,18 +53,27 @@ const Header = () => {
             >
               Home
             </Link>
+
+            <span className="w-3"></span>
+
             <button
               onClick={() => handleSectionNavigation("features")}
               className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
             >
               Features
             </button>
+
+            <span className="w-3"></span>
+
             <button
               onClick={() => handleSectionNavigation("support")}
               className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
             >
               Support
             </button>
+
+            <span className="w-3"></span>
+
             <Link
               to="/privacy"
               className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
@@ -75,7 +84,7 @@ const Header = () => {
 
           {/* Download button */}
           <div className="hidden md:flex items-center">
-            <button className="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary-light transition-colors shadow-md">
+            <button className="bg-primary text-white rounded-full font-medium hover:bg-primary-light transition-colors shadow-md w-32 h-10">
               Download Now
             </button>
           </div>
