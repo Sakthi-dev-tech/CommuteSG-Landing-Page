@@ -74,6 +74,13 @@ const Header = () => {
             </button>
 
             <Link
+              to="/faq"
+              className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
+            >
+              FAQ
+            </Link>
+
+            <Link
               to="/privacy"
               className="inline-flex items-center px-3 py-2 border-b-2 border-transparent text-base font-medium text-gray-600 hover:text-gray-900 hover:border-primary transition-colors"
             >
@@ -210,6 +217,13 @@ const Header = () => {
           >
             Support
           </button>
+          <Link
+            to="/faq"
+            className="block px-4 py-4 text-lg font-medium text-gray-700 hover:bg-white/80 hover:text-primary transition-all duration-200 rounded-lg border border-transparent hover:border-gray-200/50 hover:shadow-sm"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            FAQ
+          </Link>
           <Link
             to="/privacy"
             className="block px-4 py-4 text-lg font-medium text-gray-700 hover:bg-white/80 hover:text-primary transition-all duration-200 rounded-lg border border-transparent hover:border-gray-200/50 hover:shadow-sm"

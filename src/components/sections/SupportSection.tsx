@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, MessageCircle, HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const SupportSection = () => {
   return (
@@ -55,7 +56,10 @@ const SupportSection = () => {
             <p className="text-gray-600 mb-6">
               Contribute to suggestions and feedback for the app.
             </p>
-            <button className="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-green-700 transition-colors shadow-md">
+            <button
+              className="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-green-700 transition-colors shadow-md"
+              onClick={() => window.open('https://adormantsakthi.canny.io/commutesg-feature-requests', '_blank')}
+            >
               Give Feedback
             </button>
           </motion.div>
@@ -74,9 +78,12 @@ const SupportSection = () => {
             <p className="text-gray-600 mb-6">
               Find answers to commonly asked questions about CommuteSG.
             </p>
-            <button className="inline-block bg-orange-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-orange-700 transition-colors shadow-md">
+            <Link
+              to="/faq"
+              className="inline-block bg-orange-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-orange-700 transition-colors shadow-md"
+            >
               View FAQ
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>
