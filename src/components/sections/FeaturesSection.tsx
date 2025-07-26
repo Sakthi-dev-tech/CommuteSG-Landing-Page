@@ -33,18 +33,18 @@ const FeaturesSection = () => {
     {
       icon: <Smartphone className="w-8 h-8" />,
       title: "Home Widgets",
-      description: "Android home screen widgets for quick access to your favorite stops.",
+      description: "Android home screen widgets for quick access to your favourite stops.",
       placeholderBg: "bg-gradient-to-br from-pink-100 to-pink-200",
       demoBg: "bg-gradient-to-br from-pink-200 to-pink-300",
-      demoContent: "📱 Quick Access\n• Home screen widgets\n• Favorite stops\n• One-tap updates"
+      demoContent: "📱 Quick Access\n• Home screen widgets\n• Favourite stops\n• One-tap updates"
     },
     {
       icon: <Star className="w-8 h-8" />,
-      title: "Favorites System",
+      title: "Favourites System",
       description: "Save frequently used bus stops for easy access.",
       placeholderBg: "bg-gradient-to-br from-yellow-100 to-yellow-200",
       demoBg: "bg-gradient-to-br from-yellow-200 to-yellow-300",
-      demoContent: "⭐ Your Favorites\n• Home (Blk 123)\n• Work (CBD Area)\n• Shopping (Orchard)"
+      demoContent: "⭐ Your Favourites\n• Home (Blk 123)\n• Work (CBD Area)\n• Shopping (Orchard)"
     },
     {
       icon: <Bell className="w-8 h-8" />,
