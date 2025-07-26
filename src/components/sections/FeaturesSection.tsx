@@ -12,7 +12,8 @@ const FeaturesSection = () => {
       description: "Shows live bus arrival times so you know exactly when to leave.",
       placeholderBg: "bg-gradient-to-br from-blue-100 to-blue-200",
       demoBg: "bg-gradient-to-br from-blue-200 to-blue-300",
-      demoContent: "🚌 Bus 174 - 3 min\n🚌 Bus 67 - 7 min\n🚌 Bus 197 - 12 min"
+      demoContent: "🚌 Bus 174 - 3 min\n🚌 Bus 67 - 7 min\n🚌 Bus 197 - 12 min",
+      demoImage: "/images/app-screenshots/arrival_screenshot.jpg"
     },
     {
       icon: <MapPin className="w-8 h-8" />,
@@ -20,7 +21,8 @@ const FeaturesSection = () => {
       description: "Finds nearby bus stops using your device's GPS.",
       placeholderBg: "bg-gradient-to-br from-green-100 to-green-200",
       demoBg: "bg-gradient-to-br from-green-200 to-green-300",
-      demoContent: "📍 Nearest Stops:\n• Orchard Road (50m)\n• Somerset MRT (150m)\n• Plaza Singapura (300m)"
+      demoContent: "📍 Nearest Stops:\n• Orchard Road (50m)\n• Somerset MRT (150m)\n• Plaza Singapura (300m)",
+      demoImage: "/images/app-screenshots/nearby_stops.jpg"
     },
     {
       icon: <Route className="w-8 h-8" />,
@@ -28,7 +30,8 @@ const FeaturesSection = () => {
       description: "Explore bus stops and routes on a user-friendly Flutter Map.",
       placeholderBg: "bg-gradient-to-br from-orange-100 to-orange-200",
       demoBg: "bg-gradient-to-br from-orange-200 to-orange-300",
-      demoContent: "🗺️ Interactive Map\n• View all bus stops\n• Plan your route\n• Real-time locations"
+      demoContent: "🗺️ Interactive Map\n• View all bus stops\n• Plan your route\n• Real-time locations",
+      demoImage: "/images/app-screenshots/map_screen.jpg"
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
@@ -36,7 +39,8 @@ const FeaturesSection = () => {
       description: "Android home screen widgets for quick access to your favourite stops.",
       placeholderBg: "bg-gradient-to-br from-pink-100 to-pink-200",
       demoBg: "bg-gradient-to-br from-pink-200 to-pink-300",
-      demoContent: "📱 Quick Access\n• Home screen widgets\n• Favourite stops\n• One-tap updates"
+      demoContent: "📱 Quick Access\n• Home screen widgets\n• Favourite stops\n• One-tap updates",
+      demoImage: "/images/app-screenshots/widget.png"
     },
     {
       icon: <Star className="w-8 h-8" />,
@@ -44,7 +48,8 @@ const FeaturesSection = () => {
       description: "Save frequently used bus stops for easy access.",
       placeholderBg: "bg-gradient-to-br from-yellow-100 to-yellow-200",
       demoBg: "bg-gradient-to-br from-yellow-200 to-yellow-300",
-      demoContent: "⭐ Your Favourites\n• Home (Blk 123)\n• Work (CBD Area)\n• Shopping (Orchard)"
+      demoContent: "⭐ Your Favourites\n• Home (Blk 123)\n• Work (CBD Area)\n• Shopping (Orchard)",
+      demoImage: "/images/app-screenshots/favourite_screen.jpg"
     },
     {
       icon: <Bell className="w-8 h-8" />,
@@ -52,7 +57,8 @@ const FeaturesSection = () => {
       description: "Set custom reminders and receive smart alerts when approaching your stop.",
       placeholderBg: "bg-gradient-to-br from-orange-100 to-orange-200",
       demoBg: "bg-gradient-to-br from-orange-200 to-orange-300",
-      demoContent: "🔔 Smart Alerts\n• Custom reminders\n• Approach notifications\n• Schedule updates"
+      demoContent: "🔔 Smart Alerts\n• Custom reminders\n• Approach notifications\n• Schedule updates",
+      demoImage: "/images/app-screenshots/bus_stop_noti.gif"
     }
   ];
 
@@ -109,9 +115,17 @@ const FeaturesSection = () => {
                   hoveredFeature === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
                 }`}
               >
-                <div className="text-sm text-gray-700 font-medium whitespace-pre-line text-center">
-                  {feature.demoContent}
-                </div>
+                {feature.demoImage ? (
+                  <img 
+                    src={feature.demoImage} 
+                    alt={`${feature.title} demo`}
+                    className="max-w-full max-h-full object-contain rounded-lg shadow-md"
+                  />
+                ) : (
+                  <div className="text-sm text-gray-700 font-medium whitespace-pre-line text-center">
+                    {feature.demoContent}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
