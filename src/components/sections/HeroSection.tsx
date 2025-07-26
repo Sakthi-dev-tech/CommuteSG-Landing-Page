@@ -28,12 +28,19 @@ const HeroSection = () => {
               journey effortlessly with CommuteSG.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg">
-                Download Now
-              </button>
-              <button className="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-white transition-colors">
-                Learn More
-              </button>
+                <a
+                href="https://play.google.com/store/apps/details?id=com.adormantsakthi.commuteSG"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+                >
+                <img
+                  src="/images/download_now_button.png"
+                  alt="Get it on Google Play"
+                  className="h-auto w-48"
+                  style={{ display: "flex" }}
+                />
+                </a>
             </div>
           </motion.div>
 
