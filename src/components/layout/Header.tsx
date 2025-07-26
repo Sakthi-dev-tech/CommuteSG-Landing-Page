@@ -139,16 +139,55 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu, show/hide based on menu state */}
+      {/* Mobile menu overlay */}
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } md:hidden bg-white border-t`}
+        } md:hidden fixed inset-0 z-50 bg-white/95 backdrop-blur-md`}
       >
-        <div className="py-4 space-y-2">
+        {/* Mobile menu header */}
+        <div className="flex justify-between items-center h-20 px-4 border-b border-gray-200/50 bg-white/70 backdrop-blur-md">
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0 flex items-center" onClick={() => setIsMenuOpen(false)}>
+              <img
+                src="/images/app_icon_no_bg.png"
+                alt="CommuteSG"
+                className="h-12 w-12 mr-2"
+              />
+              <span className="text-2xl font-bold text-primary">CommuteSG</span>
+            </Link>
+          </div>
+          
+          {/* Close button */}
+          <button
+            type="button"
+            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary transition-colors"
+            onClick={toggleMenu}
+          >
+            <span className="sr-only">Close menu</span>
+            <svg
+              className="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile menu navigation */}
+        <div className="py-6 px-4 space-y-1 bg-white/90 backdrop-blur-sm min-h-screen">
           <Link
             to="/"
-            className="block px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
+            className="block px-4 py-4 text-lg font-medium text-gray-700 hover:bg-white/80 hover:text-primary transition-all duration-200 rounded-lg border border-transparent hover:border-gray-200/50 hover:shadow-sm"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
@@ -158,7 +197,7 @@ const Header = () => {
               handleSectionNavigation("features");
               setIsMenuOpen(false);
             }}
-            className="block w-full text-left px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
+            className="block w-full text-left px-4 py-4 text-lg font-medium text-gray-700 hover:bg-white/80 hover:text-primary transition-all duration-200 rounded-lg border border-transparent hover:border-gray-200/50 hover:shadow-sm"
           >
             Features
           </button>
@@ -167,32 +206,34 @@ const Header = () => {
               handleSectionNavigation("support");
               setIsMenuOpen(false);
             }}
-            className="block w-full text-left px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
+            className="block w-full text-left px-4 py-4 text-lg font-medium text-gray-700 hover:bg-white/80 hover:text-primary transition-all duration-200 rounded-lg border border-transparent hover:border-gray-200/50 hover:shadow-sm"
           >
             Support
           </button>
           <Link
             to="/privacy"
-            className="block px-4 py-3 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 transition-colors"
+            className="block px-4 py-4 text-lg font-medium text-gray-700 hover:bg-white/80 hover:text-primary transition-all duration-200 rounded-lg border border-transparent hover:border-gray-200/50 hover:shadow-sm"
             onClick={() => setIsMenuOpen(false)}
           >
             Privacy Policy
           </Link>
-            <div className="px-4 py-3">
+          
+          {/* Download button */}
+          <div className="pt-6">
             <button
               onClick={() => {
-              window.open(
-                "https://play.google.com/store/apps/details?id=com.adormantsakthi.commuteSG",
-                "_blank",
-                "noopener,noreferrer"
-              );
-              setIsMenuOpen(false);
+                window.open(
+                  "https://play.google.com/store/apps/details?id=com.adormantsakthi.commuteSG",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+                setIsMenuOpen(false);
               }}
-              className="w-full bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary-light transition-colors shadow-md"
+              className="w-full bg-primary text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-primary-light transition-colors shadow-md"
             >
               Download Now
             </button>
-            </div>
+          </div>
         </div>
       </div>
     </header>

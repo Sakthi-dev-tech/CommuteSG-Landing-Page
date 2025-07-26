@@ -31,7 +31,7 @@ const SupportSection = () => {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Email Support</h3>
             <p className="text-gray-600 mb-6">
-              Send us your questions and we'll respond within 24 hours.
+              Send us your questions and I will respond within 24 hours.
             </p>
             <a
               href="mailto:adormantsakthi@gmail.com"
