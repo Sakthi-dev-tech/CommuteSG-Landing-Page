@@ -18,7 +18,7 @@ const PrivacyPage = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-orange-300/20 via-blue-300/20 to-pink-300/20 blur-xl rounded-lg"></div>
               </div>
               <p className="text-lg bg-gradient-to-r from-gray-600 to-gray-700 bg-clip-text text-transparent">
-                Last updated: 17/07/2025
+                Last updated: 26/07/2025
               </p>
             </div>
             
@@ -59,6 +59,17 @@ const PrivacyPage = () => {
                       These notifications do not involve collecting any additional personal data.
                     </p>
                   </div>
+
+                  <div className="bg-gradient-to-r from-pastel-blue/40 to-pastel-green/40 p-4 rounded-xl border border-blue-200/50 shadow-md">
+                    <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                      <span className="mr-2">📈</span>Analytics Information
+                    </h3>
+                    <p className="text-gray-700">
+                      We collect anonymous analytics data to help us understand app usage patterns and improve our services. 
+                      This includes information such as app features used, session duration, crash reports, and performance metrics. 
+                      This data is aggregated and cannot be used to identify individual users.
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="bg-gradient-to-r from-pastel-pink/40 to-pastel-orange/40 p-4 rounded-xl mt-4 border border-pink-200/50 shadow-md">
@@ -75,22 +86,43 @@ const PrivacyPage = () => {
                     2. How We Use Your Information
                   </span>
                 </h2>
-                <p className="text-gray-700 mb-4">We use the location data we collect:</p>
+                <p className="text-gray-700 mb-4">We use the information we collect as follows:</p>
                 
-                <ul className="space-y-3">
-                  <li className="bg-gradient-to-r from-pastel-green/40 to-pastel-blue/30 p-3 rounded-xl flex items-start border border-green-200/40 shadow-sm">
-                    <span className="mr-3 text-green-600">•</span>
-                    <span className="text-gray-700">To display nearby public transport information</span>
-                  </li>
-                  <li className="bg-gradient-to-r from-pastel-blue/40 to-pastel-orange/30 p-3 rounded-xl flex items-start border border-blue-200/40 shadow-sm">
-                    <span className="mr-3 text-blue-600">•</span>
-                    <span className="text-gray-700">To provide route suggestions and updates relevant to your current location</span>
-                  </li>
-                  <li className="bg-gradient-to-r from-pastel-orange/40 to-pastel-pink/30 p-3 rounded-xl flex items-start border border-orange-200/40 shadow-sm">
-                    <span className="mr-3 text-orange-600">•</span>
-                    <span className="text-gray-700">To improve and enhance our App's functionality and services</span>
-                  </li>
-                </ul>
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Location Data:</h3>
+                  <ul className="space-y-3">
+                    <li className="bg-gradient-to-r from-pastel-green/40 to-pastel-blue/30 p-3 rounded-xl flex items-start border border-green-200/40 shadow-sm">
+                      <span className="mr-3 text-green-600">•</span>
+                      <span className="text-gray-700">To display nearby public transport information</span>
+                    </li>
+                    <li className="bg-gradient-to-r from-pastel-blue/40 to-pastel-orange/30 p-3 rounded-xl flex items-start border border-blue-200/40 shadow-sm">
+                      <span className="mr-3 text-blue-600">•</span>
+                      <span className="text-gray-700">To provide route suggestions and updates relevant to your current location</span>
+                    </li>
+                    <li className="bg-gradient-to-r from-pastel-orange/40 to-pastel-pink/30 p-3 rounded-xl flex items-start border border-orange-200/40 shadow-sm">
+                      <span className="mr-3 text-orange-600">•</span>
+                      <span className="text-gray-700">To improve and enhance our App's functionality and services</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Analytics Data:</h3>
+                  <ul className="space-y-3">
+                    <li className="bg-gradient-to-r from-pastel-purple/40 to-pastel-blue/30 p-3 rounded-xl flex items-start border border-purple-200/40 shadow-sm">
+                      <span className="mr-3 text-purple-600">•</span>
+                      <span className="text-gray-700">To understand how users interact with our app and identify popular features</span>
+                    </li>
+                    <li className="bg-gradient-to-r from-pastel-blue/40 to-pastel-green/30 p-3 rounded-xl flex items-start border border-blue-200/40 shadow-sm">
+                      <span className="mr-3 text-blue-600">•</span>
+                      <span className="text-gray-700">To identify and fix technical issues, crashes, and performance problems</span>
+                    </li>
+                    <li className="bg-gradient-to-r from-pastel-green/40 to-pastel-yellow/30 p-3 rounded-xl flex items-start border border-green-200/40 shadow-sm">
+                      <span className="mr-3 text-green-600">•</span>
+                      <span className="text-gray-700">To make data-driven decisions for future app improvements and new features</span>
+                    </li>
+                  </ul>
+                </div>
                 
                 <div className="bg-gradient-to-r from-pastel-yellow/40 to-pastel-orange/40 p-4 rounded-xl mt-4 border border-yellow-200/50 shadow-md">
                   <p className="text-gray-700 font-medium">
@@ -110,7 +142,7 @@ const PrivacyPage = () => {
                   <div className="bg-gradient-to-r from-pastel-pink/40 to-pastel-orange/40 p-4 rounded-xl border border-pink-200/50 shadow-md">
                     <p className="text-gray-700">
                       We do not sell, trade, or otherwise transfer your personal information to outside parties. 
-                      We may share anonymized or aggregated data for analytics purposes, but such data cannot identify you personally.
+                      We may share anonymised or aggregated data for analytics purposes, but such data cannot identify you personally.
                     </p>
                   </div>
                   <div className="bg-gradient-to-r from-pastel-blue/40 to-pastel-green/40 p-4 rounded-xl border border-blue-200/50 shadow-md">
@@ -128,11 +160,21 @@ const PrivacyPage = () => {
                     4. Data Retention
                   </span>
                 </h2>
-                <div className="bg-gradient-to-r from-pastel-green/40 to-pastel-blue/40 p-4 rounded-xl border border-green-200/50 shadow-md">
-                  <p className="text-gray-700">
-                    We retain location data only as long as necessary to provide services within the App. 
-                    Once you close the App or stop using location-based features, we do not continue to track or store your location.
-                  </p>
+                <div className="space-y-4">
+                  <div className="bg-gradient-to-r from-pastel-green/40 to-pastel-blue/40 p-4 rounded-xl border border-green-200/50 shadow-md">
+                    <h3 className="font-semibold text-gray-900 mb-2">Location Data:</h3>
+                    <p className="text-gray-700">
+                      We retain location data only as long as necessary to provide services within the App. 
+                      Once you close the App or stop using location-based features, we do not continue to track or store your location.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-r from-pastel-purple/40 to-pastel-pink/40 p-4 rounded-xl border border-purple-200/50 shadow-md">
+                    <h3 className="font-semibold text-gray-900 mb-2">Analytics Data:</h3>
+                    <p className="text-gray-700">
+                      Anonymous analytics data is retained for up to 12 months to help us identify trends and improve our services. 
+                      This data is automatically deleted after this retention period.
+                    </p>
+                  </div>
                 </div>
               </section>
 
@@ -145,7 +187,7 @@ const PrivacyPage = () => {
                 </h2>
                 <div className="bg-gradient-to-r from-pastel-orange/40 to-pastel-pink/40 p-4 rounded-xl border border-orange-200/50 shadow-md">
                   <p className="text-gray-700">
-                    We implement reasonable security measures to protect your data from unauthorized access, disclosure, or misuse.
+                    We implement reasonable security measures to protect your data from unauthorised access, disclosure, or misuse.
                   </p>
                 </div>
               </section>
