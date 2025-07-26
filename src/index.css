@@ -6,12 +6,12 @@
   font-weight: 400;
 
   /* Pastel color palette */
-  --primary: #6366f1;
-  --primary-light: #a5b4fc;
+  --primary: #f59e0b;
+  --primary-light: #fcd34d;
   --secondary: #10b981;
   --secondary-light: #86efac;
-  --accent: #f59e0b;
-  --accent-light: #fcd34d;
+  --accent: #6366f1;
+  --accent-light: #a5b4fc;
   --pastel-pink: #fce7f3;
   --pastel-blue: #dbeafe;
   --pastel-green: #d1fae5;
@@ -63,9 +63,9 @@ body {
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, var(--pastel-blue) 0%, var(--pastel-purple) 100%);
+  background: linear-gradient(135deg, var(--pastel-blue) 0%, var(--pastel-orange) 100%);
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, #f0f9ff 0%, #ede9fe 50%, #fef3c7 100%);
+  background: linear-gradient(135deg, #f0f9ff 0%, #fed7aa 50%, #fef3c7 100%);
 }

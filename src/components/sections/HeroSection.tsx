@@ -22,7 +22,7 @@ const HeroSection = () => {
               Get real-time bus arrival times, find nearby stops, and plan your journey effortlessly with CommuteSG.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-600 transition-colors shadow-lg">
+              <button className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg">
                 Download Now
               </button>
               <button className="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-white transition-colors">
@@ -39,9 +39,9 @@ const HeroSection = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-3xl opacity-20 scale-110"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-pink-400 rounded-full blur-3xl opacity-20 scale-110"></div>
               <AndroidMockup screenWidth={260}>
-                <div className="bg-gradient-to-b from-blue-50 to-purple-50 h-full flex flex-col">
+                <div className="bg-gradient-to-b from-blue-50 to-orange-50 h-full flex flex-col">
                   {/* App mockup content */}
                   <div className="bg-primary text-white p-4 rounded-t-lg">
                     <h3 className="text-lg font-semibold">CommuteSG</h3>

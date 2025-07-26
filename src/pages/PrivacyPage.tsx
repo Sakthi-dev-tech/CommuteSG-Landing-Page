@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout';
 const PrivacyPage = () => {
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-pastel-blue via-pastel-purple to-pastel-pink relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-pastel-blue via-pastel-orange to-pastel-pink relative overflow-hidden">
         {/* Additional gradient overlays for enhanced visual effect */}
         <div className="absolute inset-0 bg-gradient-to-tr from-pastel-green/20 via-transparent to-pastel-yellow/20"></div>
         <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-pastel-orange/10 to-pastel-pink/30"></div>
@@ -12,10 +12,10 @@ const PrivacyPage = () => {
           <div className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12 border border-white/20">
             <div className="text-center mb-8">
               <div className="relative">
-                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 bg-clip-text text-transparent mb-4 py-2">
+                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 via-blue-600 to-pink-600 bg-clip-text text-transparent mb-4 py-2">
                   Privacy Policy
                 </h1>
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-300/20 via-blue-300/20 to-pink-300/20 blur-xl rounded-lg"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-orange-300/20 via-blue-300/20 to-pink-300/20 blur-xl rounded-lg"></div>
               </div>
               <p className="text-lg bg-gradient-to-r from-gray-600 to-gray-700 bg-clip-text text-transparent">
                 Last updated: 17/07/2025
@@ -23,7 +23,7 @@ const PrivacyPage = () => {
             </div>
             
             <div className="prose prose-lg max-w-none">
-              <div className="bg-gradient-to-r from-pastel-blue/40 via-pastel-purple/30 to-pastel-pink/40 p-6 rounded-xl mb-8 border border-white/30 shadow-lg">
+              <div className="bg-gradient-to-r from-pastel-blue/40 via-pastel-orange/30 to-pastel-pink/40 p-6 rounded-xl mb-8 border border-white/30 shadow-lg">
                 <p className="text-gray-700 leading-relaxed">
                   CommuteSG ("we," "us," or "our") respects your privacy and is committed to protecting your personal information. 
                   This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application (the "App").
@@ -61,7 +61,7 @@ const PrivacyPage = () => {
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-r from-pastel-pink/40 to-pastel-purple/40 p-4 rounded-xl mt-4 border border-pink-200/50 shadow-md">
+                <div className="bg-gradient-to-r from-pastel-pink/40 to-pastel-orange/40 p-4 rounded-xl mt-4 border border-pink-200/50 shadow-md">
                   <p className="text-gray-700 font-medium">
                     We do not collect personally identifiable information such as your name, email, or phone number.
                   </p>
@@ -70,8 +70,8 @@ const PrivacyPage = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="bg-gradient-to-r from-pastel-purple/60 to-pastel-pink/60 p-2 rounded-full mr-3 shadow-md">🔧</span>
-                  <span className="bg-gradient-to-r from-purple-700 to-pink-700 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-pastel-orange/60 to-pastel-pink/60 p-2 rounded-full mr-3 shadow-md">🔧</span>
+                  <span className="bg-gradient-to-r from-orange-700 to-pink-700 bg-clip-text text-transparent">
                     2. How We Use Your Information
                   </span>
                 </h2>
@@ -82,12 +82,12 @@ const PrivacyPage = () => {
                     <span className="mr-3 text-green-600">•</span>
                     <span className="text-gray-700">To display nearby public transport information</span>
                   </li>
-                  <li className="bg-gradient-to-r from-pastel-blue/40 to-pastel-purple/30 p-3 rounded-xl flex items-start border border-blue-200/40 shadow-sm">
+                  <li className="bg-gradient-to-r from-pastel-blue/40 to-pastel-orange/30 p-3 rounded-xl flex items-start border border-blue-200/40 shadow-sm">
                     <span className="mr-3 text-blue-600">•</span>
                     <span className="text-gray-700">To provide route suggestions and updates relevant to your current location</span>
                   </li>
-                  <li className="bg-gradient-to-r from-pastel-purple/40 to-pastel-pink/30 p-3 rounded-xl flex items-start border border-purple-200/40 shadow-sm">
-                    <span className="mr-3 text-purple-600">•</span>
+                  <li className="bg-gradient-to-r from-pastel-orange/40 to-pastel-pink/30 p-3 rounded-xl flex items-start border border-orange-200/40 shadow-sm">
+                    <span className="mr-3 text-orange-600">•</span>
                     <span className="text-gray-700">To improve and enhance our App's functionality and services</span>
                   </li>
                 </ul>
@@ -107,7 +107,7 @@ const PrivacyPage = () => {
                   </span>
                 </h2>
                 <div className="space-y-4">
-                  <div className="bg-gradient-to-r from-pastel-pink/40 to-pastel-purple/40 p-4 rounded-xl border border-pink-200/50 shadow-md">
+                  <div className="bg-gradient-to-r from-pastel-pink/40 to-pastel-orange/40 p-4 rounded-xl border border-pink-200/50 shadow-md">
                     <p className="text-gray-700">
                       We do not sell, trade, or otherwise transfer your personal information to outside parties. 
                       We may share anonymized or aggregated data for analytics purposes, but such data cannot identify you personally.
@@ -138,12 +138,12 @@ const PrivacyPage = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="bg-gradient-to-r from-pastel-purple/60 to-pastel-pink/60 p-2 rounded-full mr-3 shadow-md">🔐</span>
-                  <span className="bg-gradient-to-r from-purple-700 to-pink-700 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-pastel-orange/60 to-pastel-pink/60 p-2 rounded-full mr-3 shadow-md">🔐</span>
+                  <span className="bg-gradient-to-r from-orange-700 to-pink-700 bg-clip-text text-transparent">
                     5. Security
                   </span>
                 </h2>
-                <div className="bg-gradient-to-r from-pastel-purple/40 to-pastel-pink/40 p-4 rounded-xl border border-purple-200/50 shadow-md">
+                <div className="bg-gradient-to-r from-pastel-orange/40 to-pastel-pink/40 p-4 rounded-xl border border-orange-200/50 shadow-md">
                   <p className="text-gray-700">
                     We implement reasonable security measures to protect your data from unauthorized access, disclosure, or misuse.
                   </p>
@@ -181,12 +181,12 @@ const PrivacyPage = () => {
 
               <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="bg-gradient-to-r from-pastel-pink/60 to-pastel-purple/60 p-2 rounded-full mr-3 shadow-md">📧</span>
-                  <span className="bg-gradient-to-r from-pink-700 to-purple-700 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-pastel-pink/60 to-pastel-orange/60 p-2 rounded-full mr-3 shadow-md">📧</span>
+                  <span className="bg-gradient-to-r from-pink-700 to-orange-700 bg-clip-text text-transparent">
                     8. Contact Us
                   </span>
                 </h2>
-                <div className="bg-gradient-to-r from-pastel-pink/40 to-pastel-purple/40 p-4 rounded-xl border border-pink-200/50 shadow-md">
+                <div className="bg-gradient-to-r from-pastel-pink/40 to-pastel-orange/40 p-4 rounded-xl border border-pink-200/50 shadow-md">
                   <p className="text-gray-700 mb-2">
                     If you have any questions or concerns about this Privacy Policy, please contact us at:
                   </p>

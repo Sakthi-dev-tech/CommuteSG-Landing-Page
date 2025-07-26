@@ -26,8 +26,8 @@ const FeaturesSection = () => {
       icon: <Route className="w-8 h-8" />,
       title: "Interactive Map",
       description: "Explore bus stops and routes on a user-friendly Flutter Map.",
-      placeholderBg: "bg-gradient-to-br from-purple-100 to-purple-200",
-      demoBg: "bg-gradient-to-br from-purple-200 to-purple-300",
+      placeholderBg: "bg-gradient-to-br from-orange-100 to-orange-200",
+      demoBg: "bg-gradient-to-br from-orange-200 to-orange-300",
       demoContent: "🗺️ Interactive Map\n• View all bus stops\n• Plan your route\n• Real-time locations"
     },
     {

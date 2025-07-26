@@ -3,7 +3,7 @@ import { Mail, MessageCircle, HelpCircle } from 'lucide-react';
 
 const SupportSection = () => {
   return (
-    <section id="support" className="py-20 bg-gradient-to-b from-purple-50 to-pink-50">
+    <section id="support" className="py-20 bg-gradient-to-b from-orange-50 to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,14 +67,14 @@ const SupportSection = () => {
             viewport={{ once: true }}
             className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
           >
-            <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-              <HelpCircle className="w-8 h-8 text-purple-600" />
+            <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <HelpCircle className="w-8 h-8 text-orange-600" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">FAQ</h3>
             <p className="text-gray-600 mb-6">
               Find answers to commonly asked questions about CommuteSG.
             </p>
-            <button className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-purple-700 transition-colors shadow-md">
+            <button className="inline-block bg-orange-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-orange-700 transition-colors shadow-md">
               View FAQ
             </button>
           </motion.div>
