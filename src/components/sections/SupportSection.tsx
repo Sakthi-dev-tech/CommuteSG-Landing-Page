@@ -34,7 +34,7 @@ const SupportSection = () => {
               Send us your questions and we'll respond within 24 hours.
             </p>
             <a
-              href="mailto:support@commutesg.com"
+              href="mailto:adormantsakthi@gmail.com"
               className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md"
             >
               Send Email
@@ -51,12 +51,12 @@ const SupportSection = () => {
             <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
               <MessageCircle className="w-8 h-8 text-green-600" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Live Chat</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Suggestions and Feedback</h3>
             <p className="text-gray-600 mb-6">
-              Chat with our support team in real-time for immediate assistance.
+              Contribute to suggestions and feedback for the app.
             </p>
             <button className="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-green-700 transition-colors shadow-md">
-              Start Chat
+              Give Feedback
             </button>
           </motion.div>
 

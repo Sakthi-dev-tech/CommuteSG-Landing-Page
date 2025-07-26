@@ -40,6 +40,11 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
+              <img 
+                src="/images/app_icon_no_bg.png" 
+                alt="CommuteSG" 
+                className="h-12 w-12 mr-2"
+              />
               <span className="text-2xl font-bold text-primary">CommuteSG</span>
             </Link>
           </div>
