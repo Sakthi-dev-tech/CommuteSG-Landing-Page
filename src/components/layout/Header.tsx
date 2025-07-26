@@ -40,9 +40,9 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <img 
-                src="/images/app_icon_no_bg.png" 
-                alt="CommuteSG" 
+              <img
+                src="/images/app_icon_no_bg.png"
+                alt="CommuteSG"
                 className="h-12 w-12 mr-2"
               />
               <span className="text-2xl font-bold text-primary">CommuteSG</span>
@@ -83,9 +83,14 @@ const Header = () => {
 
           {/* Download button */}
           <div className="hidden md:flex items-center">
-            <button className="bg-primary text-white rounded-full font-medium hover:bg-primary-light transition-colors shadow-md px-6 py-2">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.adormantsakthi.commuteSG"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-white rounded-full font-medium hover:bg-primary-light transition-colors shadow-md px-6 py-2"
+            >
               Download Now
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -173,11 +178,21 @@ const Header = () => {
           >
             Privacy Policy
           </Link>
-          <div className="px-4 py-3">
-            <button className="w-full bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary-light transition-colors shadow-md">
+            <div className="px-4 py-3">
+            <button
+              onClick={() => {
+              window.open(
+                "https://play.google.com/store/apps/details?id=com.adormantsakthi.commuteSG",
+                "_blank",
+                "noopener,noreferrer"
+              );
+              setIsMenuOpen(false);
+              }}
+              className="w-full bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary-light transition-colors shadow-md"
+            >
               Download Now
             </button>
-          </div>
+            </div>
         </div>
       </div>
     </header>
